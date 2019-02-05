@@ -17,6 +17,12 @@ public func routes(_ router: Router) throws {
     let acronymsController = AcronymsController()
     // 2
     try router.register(collection: acronymsController)
+    
+    // 1
+    let usersController = UsersController()
+    // 2
+    print("Registering usersController routes")
+    try router.register(collection: usersController)
 }
 
 extension Acronym: Parameter {}
